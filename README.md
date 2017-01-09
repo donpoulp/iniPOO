@@ -44,6 +44,7 @@ Assurer vous que php est correctement configuré pour votre projet
 php -i # doit Afficher le phpinfo() sans erreurs;
 ```
 
+
 ### Installation de composer
 
 ```
@@ -55,3 +56,11 @@ php -r "copy('https://getcomposer.org/composer.phar', 'composer.phar');"
 ```
 composer install
 ```
+
+
+### Lancement du serveur 
+```
+cd public
+php -S localhost:8123
+```
+
