@@ -1,0 +1,12 @@
+{
+  "require": {
+     "guzzlehttp/guzzle": "~6.0",
+     "philo/laravel-blade": "3.*",
+     "tomkyle/cookies": "dev-master",
+     "barryvdh/laravel-debugbar": "^2.3"
+  },
+
+  "config": {
+        "optimize-autoloader": true
+  }
+}
