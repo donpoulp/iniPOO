@@ -1,2 +1,4 @@
-cache/
-vendor/
+/cache/
+/vendor/
+battleField.res.php
+warrior.res.php

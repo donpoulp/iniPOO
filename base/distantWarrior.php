@@ -10,20 +10,14 @@
       {
         $client = new GuzzleHttp\Client();
         $resp = $client->request('GET', 'http://localhost:8181/');
-
-        return $resp->getBody();
+        var_dump((string)$resp->getBody());
+        return (string)$resp->getBody();
       }
 
       static function post($w)
       {
-        $client = new Client([
-            // Base URI is used with relative requests
-            'base_uri' => 'http://localhost:8181/',
-            // You can set any number of default request options.
-            'timeout'  => 5.0,
-        ]);
-        $response = $client->request('POST', $w);
-
+        $client = new GuzzleHttp\Client();
+        $response = $client->request('POST', 'http://localhost:8181/',  ['body' => $w]);
       }
 
       static function getWarrior($id)
