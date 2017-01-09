@@ -1,8 +1,5 @@
 # POO_Warrior_PHP
 
-
-# Mini Projet formulaire
-
 ## Installation Campus
 
 Votre environnement de développement comprend quelques spécificités et restrictions.
