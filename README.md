@@ -20,7 +20,7 @@ Lancez un terminal Gitbash  et copier/coller ligne par ligne commandes suivantes
 ```
 mkdir [REPERTOIRE]
 cd [REPERTOIRE]
-git clone git clone https://github.com/campus-digital-grenoble/POO_Warrior_PHP.git .
+git clone https://github.com/campus-digital-grenoble/POO_Warrior_PHP.git .
 ```
 
 ### Configuration spéciale uWamp/Campus
