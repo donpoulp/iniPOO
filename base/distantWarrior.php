@@ -9,28 +9,30 @@
       static function get()
       {
         $client = new GuzzleHttp\Client();
-        $resp = $client->request('GET', 'http://localhost:8181/');
-        var_dump((string)$resp->getBody());
+        $resp = $client->request('GET', 'http://e-confor.fr/warrior/');
+
         return (string)$resp->getBody();
       }
 
       static function post($w)
       {
         $client = new GuzzleHttp\Client();
-        $response = $client->request('POST', 'http://localhost:8181/',  ['body' => $w]);
+        $response = $client->request('POST', 'http://e-confor.fr/warrior/', [
+          'form_params' => ['val'=>$w, 'who'=>$GLOBALS['warriorID']],
+          'headers' => [
+            'content-type'     => 'application/x-www-form-urlencoded'
+          ]]);
       }
 
       static function getWarrior($id)
       {
         $w = DistantWarrior::get();
-
         return BaseWarrior::getWarriorBase($w,$id);
       }
 
       static function getWarriors()
       {
         $w = DistantWarrior::get();
-
         return BaseWarrior::getWarriorsBase($w);
       }
 
@@ -46,12 +48,13 @@
 
       public function saveNew()
       {
+        if (property_exists($this,'id') && $this->id!=$GLOBALS['warriorID'])
+          throw new Exception('Seul les autres étudiants peuvent créer des combatants !!!');
+
         // Get the actual cookie
         $w = DistantWarrior::get();
-
         $w = BaseWarrior::saveNewBase($w);
-
-        // Save cookie
+        // Save
         DistantWarrior::post(htmlentities(serialize($w)));
       }
 
@@ -64,10 +67,8 @@
       {
         // Get the actual cookie
         $w = DistantWarrior::get();
-
         $w = BaseWarrior::saveBase($w);
-
-        // Save cookie
+        // Save
         DistantWarrior::post(htmlentities(serialize($w)));
       }
   };
