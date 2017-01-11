@@ -6,17 +6,6 @@
 
   class BattleField extends localBattleField
   {
-    static function createMyWarrior()
-    {
 
-    }
 
-    static function createOtherWarrior()
-    {
-
-    }
   }
-
-
-
-?>
