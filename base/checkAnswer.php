@@ -175,7 +175,7 @@
     });
 
     // Check 15
-    $has_my_warrior = new resultElement("La createMyWarrior doit <u>instancier</u> un guerrier, lui affecter une arme, une image et le sauvegarder (ie la classe localWarrior contient une <u>méthode</u> save)",function(){
+    $has_my_warrior = new resultElement("La méthode createMyWarrior doit <u>instancier</u> un guerrier, lui affecter une arme, une image et le sauvegarder (ie la classe localWarrior contient une <u>méthode</u> save)",function(){
 
       $myWarrior = NULL;
 
