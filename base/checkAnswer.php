@@ -165,8 +165,13 @@
 
     // Check 14
     $has_create_my = new resultElement("La classe BattleField doit avoir une <u>méthode statique</u> createMyWarrior",function(){
-      $MethodChecker = new ReflectionMethod('BattleField','createMyWarrior');
-      return ($MethodChecker->isStatic() );
+        try{
+            $MethodChecker = new ReflectionMethod('BattleField','createMyWarrior');
+            return ($MethodChecker->isStatic() );
+        }  catch (Exception $e) {
+
+        }
+
     });
 
     // Check 15
