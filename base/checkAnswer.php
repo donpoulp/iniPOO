@@ -120,8 +120,8 @@
         return (class_exists('Weapon'));
     });
 
-    $has_set_weapon = new resultElement("Warrior doit avoir une <u>méthode</u> SetWeapon() qui prend comme <u>argument</u> un Weapon",function(){
     // Check 10
+    $has_set_weapon = new resultElement("La <u>classe</u> Warrior doit avoir une <u>méthode</u> SetWeapon() qui prend comme <u>argument</u> un Weapon",function(){
 
       $warrior = new Warrior(10);
       $sWarrior = new StartrekWarrior(11);
