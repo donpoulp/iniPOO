@@ -145,7 +145,7 @@
     });
 
     // Check 12
-    $weapon_has_attirbutes = new resultElement("Weapon doivent avoir les <u>attributs</u> \$id, \$strenght et \$imageUrl ",function(){
+    $weapon_has_attirbutes = new resultElement("Weapon doivent avoir les <u>attributs</u> \$id, \$strength et \$imageUrl ",function(){
 
       $weapon = new Weapon(22,100);
 
