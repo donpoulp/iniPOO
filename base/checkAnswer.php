@@ -178,8 +178,8 @@
     $has_my_warrior = new resultElement("La méthode createMyWarrior doit <u>instancier</u> un guerrier, lui affecter une arme, une image et le sauvegarder (ie la classe localWarrior contient une <u>méthode</u> save)",function(){
 
       $myWarrior = NULL;
-
       try {
+        BattleField::createMyWarrior();
         $myWarrior = warrior::getWarrior($GLOBALS['warriorID']);
       } catch (Exception $e) {
       }
