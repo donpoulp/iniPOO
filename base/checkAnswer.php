@@ -189,8 +189,12 @@
 
     // Check 16
     $has_create_others = new resultElement("La <u>classe</u> BattleField doit avoir une <u>méthode statique</u> createOtherWarrior",function(){
-      $MethodChecker = new ReflectionMethod('BattleField','createOtherWarrior');
-      return ($MethodChecker->isStatic() );
+        try{
+            $MethodChecker = new ReflectionMethod('BattleField','createOtherWarrior');
+            return ($MethodChecker->isStatic() );
+        } catch (Exception $e) {
+        }
+
     });
 
     // Check 17
