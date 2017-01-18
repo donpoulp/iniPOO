@@ -236,7 +236,7 @@
 
     // record the tests
     $results = array($change_id, $class_exits, $is_subclass,
-    $has_properties1,$has_properties2, $has_constructors, $warrior_constructor_value, $other_constructor_values,
+    $has_properties1,$has_properties2, $power_method, $has_constructors, $warrior_constructor_value, $other_constructor_values,
     $has_weapon,
     $has_set_weapon,$has_constructors2,$weapon_has_attirbutes, $has_set_url, $has_create_my,
     $has_my_warrior, $has_create_others, $has_other_warriors);
