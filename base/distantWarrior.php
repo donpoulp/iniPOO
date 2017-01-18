@@ -9,7 +9,7 @@
       static function get()
       {
         $client = new GuzzleHttp\Client();
-        $resp = $client->request('GET', 'http://e-confor.fr/warrior/');
+        $resp = $client->request('GET', 'http://campus-numerique-in-the-alps.com/php-warrior/');
 
         return (string)$resp->getBody();
       }
@@ -17,7 +17,7 @@
       static function post($w)
       {
         $client = new GuzzleHttp\Client();
-        $response = $client->request('POST', 'http://e-confor.fr/warrior/', [
+        $response = $client->request('POST', 'http://campus-numerique-in-the-alps.com/php-warrior/', [
           'form_params' => ['val'=>$w, 'who'=>$GLOBALS['warriorID']],
           'headers' => [
             'content-type'     => 'application/x-www-form-urlencoded'

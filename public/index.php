@@ -13,7 +13,7 @@
 
   $blade = new Blade($views, $cache);
 
-  $results = checkAnswer();
+  $results = CheckAnswer();
 
   $errors = array();
   $me = $GLOBALS['warriorID'];
@@ -23,12 +23,12 @@
 
 
   try {
-    $myWarrior = warrior::getWarrior($GLOBALS['warriorID']);
+    $myWarrior = Warrior::getWarrior($GLOBALS['warriorID']);
   } catch (Exception $e) {
   }
 
   try {
-    $otherWarriors = warrior::getWarriorsExceptOne($GLOBALS['warriorID']);
+    $otherWarriors = Warrior::getWarriorsExceptOne($GLOBALS['warriorID']);
   } catch (Exception $e) {
   }
 
