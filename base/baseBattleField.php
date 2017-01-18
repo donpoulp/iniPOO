@@ -1,7 +1,7 @@
 <?php
 
 
-  class localBattleField
+  class BaseBattleField
   {
       protected $myWarrior;
       protected $otherWarriors;
