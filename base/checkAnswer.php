@@ -56,7 +56,7 @@
     });
 
     // Check 4
-    $has_properties1 = new resultElement("La <u>classe</u> Warrior doit avoir les <u>membres</u> \$name, \$speed, \$life et \$shield, \$imageUrl",function(){
+    $has_properties1 = new resultElement("La <u>classe</u> Warrior doit avoir les <u>attributs</u> \$name, \$speed, \$life et \$shield, \$imageUrl",function(){
 
       $warrior = new Warrior(4);
 
@@ -68,7 +68,7 @@
     });
 
     // Check 5
-    $has_properties2 = new resultElement("Les <u>classe</u> StartrekWarrior, MarvelWarrior et PokemonWarrior doivent avoir respectivement les <u>membres</u>  \$mentalPower, \$superPower et \$level",function(){
+    $has_properties2 = new resultElement("Les <u>classe</u> StartrekWarrior, MarvelWarrior et PokemonWarrior doivent avoir respectivement les <u>attributs</u>  \$mentalPower, \$superPower et \$level",function(){
 
       $sWarrior = new StartrekWarrior(5);
       $mWarrior = new MarvelWarrior(6);
