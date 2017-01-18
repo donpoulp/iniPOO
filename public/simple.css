@@ -194,18 +194,14 @@ body
 #power-btn{
   padding:1.3em;
   background: Aqua;
-  width: 33%;
   text-align: center;
-  color:black ;
+  color: black;
   font-size: 1.5rem;
 
-  font-family: 'Knewave', cursive;
-
+  font-family: 'Press Start 2P', cursive;
+  border: none;
   margin: 70px auto 0px ;
   user-select: none;
-
-
-
 }
 
 #cont {
@@ -222,4 +218,39 @@ body
 
 #power-btn:active{
   background: yellow;
+}
+
+.center{
+	text-align: center;
+}
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
+@-webkit-keyframes demo {
+    0% {
+        background-color: Yellow;
+        opacity:1;
+    }
+    22% {
+        background-color: Yellow;
+    }
+    77% {
+        background-color: Red;
+    }
+    100% {
+        background-color: #777;
+    }
+}
+
+.demo {
+    -webkit-animation-name: demo;
+    animation-name: demo;
+    -webkit-animation-duration: 900ms;
+    animation-duration: 900ms;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
 }
