@@ -222,7 +222,7 @@
     });
 
     // Check 18
-    $has_other_warriors = new ResultElement("18/ La createMyWarrior doit <u>instancier</u> un guerrier, lui affecter une arme, une image et le sauvegarder (\ie la <u>classe</u> localWarrior contient une <u>méthode</u> saveNew), créer les autres guerriers grace au lien ci_dessous",function(){
+    $has_other_warriors = new ResultElement("18/ La <u>méthode statique</u> createOtherWarrior doit <u>instancier</u> un guerrier, lui affecter une arme, une image et le sauvegarder (\ie la <u>classe</u> localWarrior contient une <u>méthode</u> saveNew), créer les autres guerriers grace au lien ci_dessous",function(){
 
       $otherWarriors = NULL;
 
