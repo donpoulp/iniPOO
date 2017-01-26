@@ -162,7 +162,7 @@
     });
 
     // Check 12
-    $has_constructors2 = new ResultElement("12/ Weapon doit avoir un <u>constructeur</u> à 2 arguents qui initialise \$id en \$strength",function(){
+    $has_constructors2 = new ResultElement("12/ Weapon doit avoir un <u>constructeur</u> à 2 arguments qui initialise \$id et \$strength",function(){
 
       $weapon = new Weapon(22,100);
 
