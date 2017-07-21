@@ -21,6 +21,7 @@ Lancez un terminal Gitbash  et copier/coller ligne par ligne commandes suivantes
 mkdir [REPERTOIRE]
 cd [REPERTOIRE]
 git clone https://github.com/campus-digital-grenoble/POO_Warrior_PHP.git .
+cd public
 ```
 
 ### Configuration spéciale uWamp/Campus
