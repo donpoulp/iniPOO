@@ -61,7 +61,6 @@ composer install
 
 ### Lancement du serveur 
 ```
-cd public
 php -S localhost:8123
 ```
 
