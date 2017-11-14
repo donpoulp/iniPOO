@@ -51,6 +51,7 @@
       <li>Battez tous les autres guerriers</li>
       <li>Devenez immortels</li>
       <li>Passez, si ce n'est déjà fait, tous les membres de Warrior en private</li>
+      <li>Implémentez un "vrai" serveur de jeux, à partir de <a href="https://github.com/campus-digital-grenoble/POO_serv">POO Serv</a></li>
     </ul>
 
   @endif
