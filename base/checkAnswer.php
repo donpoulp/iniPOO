@@ -45,7 +45,7 @@
     });
 
     // Check 2
-    $class_exits = new ResultElement("2/ Les <u>classes</u> StartrekWarrior, MarvelWarrior et PokemonWarrior doivent être crées ",function(){
+    $class_exits = new ResultElement("2/ Les <u>classes</u> StartrekWarrior, MarvelWarrior et PokemonWarrior doivent être crées dans le ficher <u>students/warrior.php</u> ",function(){
       return (class_exists('StartrekWarrior')
       && class_exists('MarvelWarrior')
       && class_exists('PokemonWarrior'));
@@ -64,7 +64,7 @@
     });
 
     // Check 4
-    $has_properties1 = new ResultElement("4/ La <u>classe</u> Warrior doit avoir les <u>attributs</u> \$id, \$name, \$speed, \$life et \$shield, \$imageUrl et \$weapon",function(){
+    $has_properties1 = new ResultElement("4/ La <u>classe</u> Warrior doit avoir les <u>attributs (publics)</u> \$id, \$name, \$speed, \$life et \$shield, \$imageUrl et \$weapon",function(){
 
       $warrior = new TestWarrior(4);
 
@@ -96,9 +96,9 @@
       $mWarrior = new MarvelWarrior(10);
       $pWarrior = new PokemonWarrior(11);
 
-      return (method_exists($sWarrior,'power')
-      && method_exists($mWarrior,'power')
-      && method_exists($pWarrior,'power'));
+      return (method_exists($sWarrior,'power') && $sWarrior->power() == 8
+      && method_exists($mWarrior,'power') && $mWarrior->power() == 100
+      && method_exists($pWarrior,'power') && $pWarrior->power() == 1);
 
     });
 
@@ -146,7 +146,7 @@
     });
 
     // Check 11
-    $has_set_weapon = new ResultElement("11/ La <u>classe</u> Warrior doit avoir une <u>méthode</u> SetWeapon() qui prend comme <u>argument</u> un Weapon",function(){
+    $has_set_weapon = new ResultElement("11/ La <u>classe</u> Warrior doit avoir une <u>méthode</u> SetWeapon() qui prend comme <u>argument</u> un Weapon. ATTENTION, c'est un <u>setter</u>",function(){
 
       $warrior = new TestWarrior(10);
       $sWarrior = new StartrekWarrior(11);
@@ -162,21 +162,21 @@
     });
 
     // Check 12
-    $has_constructors2 = new ResultElement("12/ Weapon doit avoir un <u>constructeur</u> à 2 arguments qui initialise \$id et \$strength",function(){
-
-      $weapon = new Weapon(22,100);
-
-      return (method_exists($weapon,'__construct') && $weapon->id == 22);
-    });
-
-    // Check 13
-    $weapon_has_attirbutes = new ResultElement("13/ Weapon doivent avoir les <u>attributs</u> \$id, \$strength et \$imageUrl ",function(){
+    $weapon_has_attirbutes = new ResultElement("12/ Weapon doivent avoir les <u>attributs (publics)</u> \$id, \$strength et \$imageUrl ",function(){
 
       $weapon = new Weapon(22,100);
 
       return (property_exists($weapon,'id')
       && property_exists($weapon,'strength')
       && property_exists($weapon,'imageUrl'));
+    });
+
+    // Check 13
+    $has_constructors2 = new ResultElement("13/ Weapon doit avoir un <u>constructeur</u> à 2 arguments qui initialise \$id et \$strength",function(){
+
+      $weapon = new Weapon(22,100);
+
+      return (method_exists($weapon,'__construct') && $weapon->id == 22 && $weapon->strength == 100);
     });
 
     // Check 14
@@ -200,7 +200,7 @@
     });
 
     // Check 16
-    $has_my_warrior = new ResultElement("16/ La méthode createMyWarrior doit <u>instancier</u> un guerrier, lui affecter une arme, une image et le sauvegarder (ie la classe localWarrior contient une <u>méthode</u> saveNew), ATTENTION, l'id du guerrier doit être la <u>variable globale</u> warriorID, créer votre guerrier grace au lien ci_dessous",function(){
+    $has_my_warrior = new ResultElement("16/ La méthode createMyWarrior doit <u>instancier</u> un guerrier, lui affecter une arme, une image et le sauvegarder (ie la classe localWarrior contient une <u>méthode</u> saveNew), ATTENTION, l'id du guerrier doit être la <u>variable globale</u> warriorID, créez votre guerrier grace au lien ci-dessous",function(){
 
       $myWarrior = NULL;
       try {
@@ -222,7 +222,7 @@
     });
 
     // Check 18
-    $has_other_warriors = new ResultElement("18/ La <u>méthode statique</u> createOtherWarrior doit <u>instancier</u> un guerrier, lui affecter une arme, une image et le sauvegarder (\ie la <u>classe</u> localWarrior contient une <u>méthode</u> saveNew), créer les autres guerriers grace au lien ci_dessous",function(){
+    $has_other_warriors = new ResultElement("18/ La <u>méthode statique</u> createOtherWarrior doit <u>instancier</u> un guerrier, lui affecter une arme, une image et le sauvegarder (ie la <u>classe</u> localWarrior contient une <u>méthode</u> saveNew), créez les autres guerriers grace au lien ci-dessous",function(){
 
       $otherWarriors = NULL;
 
@@ -238,7 +238,7 @@
     $results = array($change_id, $class_exits, $is_subclass,
     $has_properties1,$has_properties2, $power_method, $has_constructors, $warrior_constructor_value, $other_constructor_values,
     $has_weapon,
-    $has_set_weapon,$has_constructors2,$weapon_has_attirbutes, $has_set_url, $has_create_my,
+    $has_set_weapon, $weapon_has_attirbutes, $has_constructors2, $has_set_url, $has_create_my,
     $has_my_warrior, $has_create_others, $has_other_warriors);
 
 

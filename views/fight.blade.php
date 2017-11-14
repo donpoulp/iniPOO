@@ -73,7 +73,9 @@
 </head>
 <body class="demo">
   <h1>Warrior Project</h1>
-
+  <div class="clearfix center">
+      <button id="power-btn">fight !!!</button>
+  </div>
   <table>
     <tr>
       <td>
@@ -94,9 +96,6 @@
       </td>
     </tr>
   </table>
-  <div class="clearfix center">
-      <button id="power-btn">fight !!!</button>
-  </div>
 
 </body>
 </html>

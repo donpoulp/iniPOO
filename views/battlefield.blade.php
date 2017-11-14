@@ -15,7 +15,7 @@
       </td>
 
       @if($battleField->getOtherWarriors()!=NULL)
-          <td width=33% align=center><img src="http://static9.comicvine.com/uploads/original/11129/111299281/5446598-1945215193-52705.png" alt="VS" style="width:100px;"></td>
+          <td width=33% align=center><img src="vs.png" alt="VS" style="width:100px;"></td>
           <td width=33%>
             <table>
             @foreach ($battleField->getOtherWarriors() as $warrior)

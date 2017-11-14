@@ -45,12 +45,12 @@
     <h1>Pour aller plus loin ... </h1>
     <ul>
       <li>Créez plus de  guerriers</li>
-      <li>Affichez les caractéristiques de vos guerriers (Je vous conseil de le faire dans battlefield.blade.php)</li>
+      <li>Affichez les caractéristiques de vos guerriers (Je vous conseille de le faire dans battlefield.blade.php)</li>
       <li>Pour avoir un vrai champ de bataille, faites hériter warrior de DistantWarrior</li>
-      <li>Créeez le guerrier le plus fort de l'arène</li>
-      <li>Battez tout les autres guerriers</li>
+      <li>Créez le guerrier le plus fort de l'arène</li>
+      <li>Battez tous les autres guerriers</li>
       <li>Devenez immortels</li>
-      <li>Passez tout les membres de Warrior en private</li>
+      <li>Passez, si ce n'est déjà fait, tous les membres de Warrior en private</li>
     </ul>
 
   @endif
