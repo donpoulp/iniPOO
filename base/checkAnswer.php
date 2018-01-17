@@ -93,12 +93,17 @@
     $power_method = new ResultElement("6/ Les <u>classes</u> StartrekWarrior, MarvelWarrior et PokemonWarrior doivent avoir un méthode power qui retournent respectivement \$mentalPower, \$superPower et \$level",function(){
 
       $sWarrior = new StartrekWarrior(9);
+      $sWarrior->mentalPower = 12;
       $mWarrior = new MarvelWarrior(10);
+      $mWarrior->superPower = 12;
       $pWarrior = new PokemonWarrior(11);
+      $pWarrior->level = 12;
 
-      return (method_exists($sWarrior,'power') && $sWarrior->power() == 8
-      && method_exists($mWarrior,'power') && $mWarrior->power() == 100
-      && method_exists($pWarrior,'power') && $pWarrior->power() == 1);
+      return (
+        method_exists($sWarrior,'power') && $sWarrior->power() == $sWarrior->mentalPower
+        && method_exists($mWarrior,'power') && $mWarrior->power() == $mWarrior->superPower
+        && method_exists($pWarrior,'power') && $pWarrior->power() == $pWarrior->level
+      );
 
     });
 
@@ -185,7 +190,14 @@
       $warrior = new TestWarrior(23);
       $weapon = new Weapon(24,100);
 
-      return (method_exists($warrior,'SetImageUrl') && method_exists($weapon,'SetImageUrl') );
+      if (method_exists($warrior,'SetImageUrl') && method_exists($weapon,'SetImageUrl')) {
+        $warrior->SetImageUrl('test');
+        $weapon->SetImageUrl('test');
+
+        return $warrior->imageUrl == 'test' && $weapon->imageUrl == 'test';
+      } else {
+         return false;
+      }
     });
 
     // Check 15
