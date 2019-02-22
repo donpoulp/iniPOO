@@ -160,10 +160,16 @@
 
       if (!method_exists($warrior,'SetWeapon')) return false;
 
-      $we = new Weapon(5,100);
-      $warrior->SetWeapon($we);
+      try {
+        $warrior->SetWeapon('toto');
+      } catch (TypeError $te) {
+        $we = new Weapon(5,100);
+        $warrior->SetWeapon($we);
 
-      return ($warrior->weapon == $we);
+        return ($warrior->weapon == $we);
+      }
+
+      return false;
     });
 
     // Check 12
