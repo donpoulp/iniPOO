@@ -15,6 +15,10 @@
 
   <h1>Warrior Project</h1>
 
+  <h4>Si les étapes sont validées, le point devient vert au rechargement de la page</h4>
+  <br />
+  <br />
+
   <table>
   @foreach ($results as $result)
     <tr>
@@ -50,7 +54,6 @@
       <li>Créez le guerrier le plus fort de l'arène</li>
       <li>Battez tous les autres guerriers</li>
       <li>Devenez immortels</li>
-      <li>Passez, si ce n'est déjà fait, tous les membres de Warrior en private</li>
       <li>Implémentez un "vrai" serveur de jeux, à partir de <a href="https://github.com/campus-digital-grenoble/POO_serv">POO Serv</a></li>
     </ul>
 
