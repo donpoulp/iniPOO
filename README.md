@@ -35,6 +35,7 @@ php -i # doit Afficher le phpinfo() sans erreurs;
 ### Installation de composer
 
 ```
+cd POO_Warrior_PHP
 php -r "copy('https://getcomposer.org/composer.phar', 'composer.phar');"
 ```
 
