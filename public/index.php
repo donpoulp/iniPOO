@@ -44,27 +44,27 @@
 
 
 
-  parse_str($url['query']);
+  parse_str($url['query'], $params);
 
-  if (!isset($do))
+  if (!isset($params['do']))
   {
       echo $blade->view()->make('home')->with('results',$results)->with('me',$me)->with('errors', $errors)->with('battleField', $battleField)->render();
       return;
   }
 
 
-  if ( $do=='fight')
+  if ( $params['do']=='fight')
   {
-      $battleField->setVsId($p2);
+      $battleField->setVsId($params['p2']);
       echo $blade->view()->make('fight')->with('battleField', $battleField)->render();
       return;
   }
 
-  if ( $do=='iwin')
+  if ( $params['do']=='iwin')
   {
       try {
 
-        $battleField->setVsId($p2);
+        $battleField->setVsId($params['p2']);
         $battleField->iWin();
       } catch (Exception $e) {
           array_push($errors, $e->getMessage());
@@ -90,10 +90,10 @@
       return;
   }
 
-  if ( $do=='ilost')
+  if ( $params['do']=='ilost')
   {
       try{
-          $battleField->setVsId($p2);
+          $battleField->setVsId($params['p2']);
           $battleField->iLost();
       } catch (Exception $e) {
           array_push($errors, $e->getMessage());
@@ -120,7 +120,7 @@
       return;
   }
 
-  if ( $do=='createMy')
+  if ( $params['do']=='createMy')
   {
 
       try {
@@ -152,7 +152,7 @@
       return;
   }
 
-  if ( $do=='createOther')
+  if ( $params['do']=='createOther')
   {
       try {
           battleField::createOtherWarrior();
@@ -183,7 +183,7 @@
       echo $blade->view()->make('home')->with('results',$results)->with('me',$me)->with('errors', $errors)->with('battleField', $battleField)->render();
       return;
   }
-  if ( $do=='deleteAll')
+  if ( $params['do']=='deleteAll')
   {
       try {
           warrior::deleteAll();
