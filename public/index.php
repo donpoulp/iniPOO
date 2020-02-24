@@ -10,6 +10,11 @@
   $views = __DIR__ . '/../views';
   $cache = __DIR__ . '/../cache';
 
+  set_error_handler('handle_notices', E_NOTICE);
+  function handle_notices($severity, $message, $filename, $lineno) {
+      throw new NoticeException($message, 0, $severity, $filename, $lineno);
+  }
+
 
   $blade = new Blade($views, $cache);
 

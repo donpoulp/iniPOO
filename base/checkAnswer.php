@@ -1,6 +1,7 @@
 <?php
 
 require_once '../students/warrior.php';
+require_once 'NoticeException.php';
 
 class TestWarrior extends Warrior
 {
@@ -20,8 +21,17 @@ class ResultElement
 
     public function __call($name, $args)
     {
-        $args['caller'] = $this;
-        return call_user_func_array($this->customFns[$name], $args);
+        try {
+            $args['caller'] = $this;
+            return call_user_func_array($this->customFns[$name], $args);
+        } catch (NoticeException $e) {
+            $message = $e->getMessage();
+            $file = $e->getFile();
+            $line = $e->getLine();
+            echo "<b>Notice: </b> $message in $file on line $line";
+
+            return false;
+        }
     }
 
     public function call_test()
@@ -102,7 +112,6 @@ function CheckAnswer()
 
     // Check 6
     $power_method = new ResultElement("6/ Les <u>classes</u> StartrekWarrior, MarvelWarrior et PokemonWarrior doivent avoir un méthode power qui retournent respectivement \$mentalPower, \$superPower et \$level", function () {
-
         $sWarrior = new StartrekWarrior(9);
         $sWarrior->mentalPower = 12;
         $mWarrior = new MarvelWarrior(10);
