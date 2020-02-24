@@ -167,7 +167,7 @@ function CheckAnswer()
     $has_weapon = new ResultElement("10/ Une <u>classe</u> Weapon doit être créée", function () {
 
 
-        return (class_exists('Weapon'));
+        return (class_exists('Weapon') && !is_subclass_of(new Weapon(1), 'Warrior'));
     });
 
     // Check 11
