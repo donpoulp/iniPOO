@@ -54,7 +54,7 @@
       <li>Créez le guerrier le plus fort de l'arène</li>
       <li>Battez tous les autres guerriers</li>
       <li>Devenez immortels</li>
-      <li>Implémentez un "vrai" serveur de jeux, à partir de <a href="https://github.com/campus-digital-grenoble/POO_serv">POO Serv</a></li>
+      <li>Implémentez un "vrai" serveur de jeux, à partir de <a href=https://github.com/le-campus-numerique/PHP_POO_Serve">POO Serve</a></li>
     </ul>
 
   @endif
