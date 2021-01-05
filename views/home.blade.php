@@ -37,8 +37,8 @@
 
   @if (checkNbBadAnswers($results) < 4)
     <h1>Ready to fight ? </h1>
-    <a href="{{BattleField::getHost()}}?do=createMy&me={{$me}}">Create My</a> <br>
-    <a href="{{BattleField::getHost()}}?do=createOther&me={{$me}}">Create Other</a> <br>
+    <a href="{{BattleField::getHost()}}?do=createMy&me={{$me}}">Create My Warrior</a> <br>
+    <a href="{{BattleField::getHost()}}?do=createOther&me={{$me}}">Create Another</a> <br>
     <a href="{{BattleField::getHost()}}?do=deleteAll&me={{$me}}">Delete All</a> <br>
 
     @include('battlefield')

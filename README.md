@@ -6,26 +6,25 @@ Votre environnement de développement comprend quelques spécificités et restri
 
 Nous vous proposons de suivre la procédure suivante.
 
-Lancez un terminal Gitbash  et copier/coller ligne par ligne commandes suivantes.
+Lancez un terminal Gitbash et copier/coller ligne par ligne les commandes suivantes.
 
-/!\ Controller les messages d'erreurs /!\
+/!\ Contrôlez les messages d'erreurs /!\
 
+### On clone le dépôt Git.
 
-### On clone le dépot Git.
+/!\ ici `[REPERTOIRE]` fait référence à votre répertoire projet, pensez à personnaliser cette valeur /!\
 
-/!\ ici `[REPERTOIRE]` fait référence à votre répertoire projet, pensez à parsonnaliser cette valeur /!\
-
--> Conseil : placer `[REPERTOIRE]` dans le répertoire `www` de Wamp  /!\
+-> Conseil : placez `[REPERTOIRE]` dans le répertoire `htdocs` de Mamp /!\
 
 ```
 mkdir [REPERTOIRE]
 cd [REPERTOIRE]
-git clone https://github.com/campus-digital-grenoble/POO_Warrior_PHP.git .
+git clone https://github.com/campus-digital-grenoble/POO_Warrior_PHP.git
 ```
 
 ### Avant d'aller plus loin :
 
-Assurer vous que php est correctement configuré pour votre projet
+Assurez-vous que php est correctement configuré pour votre projet
 
 ```
 php -i # doit Afficher le phpinfo() sans erreurs;
@@ -34,6 +33,12 @@ php -i # doit Afficher le phpinfo() sans erreurs;
 
 ### Installation de composer
 
+Si Composer est déjà installé sur votre poste, lancez simplement la commande suivante puis passez à l'étape "Lancement du serveur".
+```
+composer install
+```
+
+Sinon :
 ```
 cd POO_Warrior_PHP
 php -r "copy('https://getcomposer.org/composer.phar', 'composer.phar');"
