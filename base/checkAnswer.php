@@ -171,20 +171,20 @@ function CheckAnswer()
     });
 
     // Check 11
-    $has_set_weapon = new ResultElement("11/ La <u>classe</u> Warrior doit avoir une <u>méthode</u> SetWeapon() qui prend comme <u>argument</u> un Weapon. ATTENTION, c'est un <u>setter</u>", function () {
+    $has_set_weapon = new ResultElement("11/ La <u>classe</u> Warrior doit avoir une <u>méthode</u> setWeapon() qui prend comme <u>argument</u> un Weapon. ATTENTION, c'est un <u>setter</u>", function () {
 
         $warrior = new TestWarrior(10);
         $sWarrior = new StartrekWarrior(11);
         $mWarrior = new MarvelWarrior(12);
         $pWarrior = new PokemonWarrior(13);
 
-        if (!method_exists($warrior, 'SetWeapon')) return false;
+        if (!method_exists($warrior, 'setWeapon')) return false;
 
         try {
-            $warrior->SetWeapon('toto');
+            $warrior->setWeapon('toto');
         } catch (TypeError $te) {
             $we = new Weapon(5, 100);
-            $warrior->SetWeapon($we);
+            $warrior->setWeapon($we);
 
             return ($warrior->weapon == $we);
         }
