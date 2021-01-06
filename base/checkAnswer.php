@@ -203,7 +203,7 @@ function CheckAnswer()
     });
 
     // Check 13
-    $has_constructors2 = new ResultElement("13/ Weapon doit avoir un <u>constructeur</u> à 2 arguments qui initialise \$id et \$strength", function () {
+    $has_constructors2 = new ResultElement("13/ Weapon doit avoir un <u>constructeur</u> à 2 arguments \$id et \$strength qui initialise les attributs associés", function () {
 
         $weapon = new Weapon(22, 100);
 
