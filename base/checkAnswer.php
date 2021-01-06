@@ -211,14 +211,14 @@ function CheckAnswer()
     });
 
     // Check 14
-    $has_set_url = new ResultElement("14/ Warrior et Weapon doivent avoir une <u>méthode</u> SetImageUrl(\$url) ", function () {
+    $has_set_url = new ResultElement("14/ Warrior et Weapon doivent avoir une <u>méthode</u> setImageUrl(\$url) qui initialise l'attribut \$imageUrl", function () {
 
         $warrior = new TestWarrior(23);
         $weapon = new Weapon(24, 100);
 
-        if (method_exists($warrior, 'SetImageUrl') && method_exists($weapon, 'SetImageUrl')) {
-            $warrior->SetImageUrl('test');
-            $weapon->SetImageUrl('test');
+        if (method_exists($warrior, 'setImageUrl') && method_exists($weapon, 'setImageUrl')) {
+            $warrior->setImageUrl('test');
+            $weapon->setImageUrl('test');
 
             return $warrior->imageUrl == 'test' && $weapon->imageUrl == 'test';
         } else {
