@@ -74,7 +74,7 @@ function CheckAnswer()
     });
 
     // Check 4
-    $has_properties1 = new ResultElement("4/ La <u>classe</u> Warrior doit avoir les <u>attributs (publics)</u> \$id, \$name, \$speed, \$life et \$shield, \$imageUrl et \$weapon", function () {
+    $has_properties1 = new ResultElement("4/ La <u>classe</u> Warrior doit avoir les <u>attributs (publics)</u> \$id, \$name, \$speed, \$life, \$shield, \$imageUrl et \$weapon", function () {
 
         $warrior = new TestWarrior(4);
 
