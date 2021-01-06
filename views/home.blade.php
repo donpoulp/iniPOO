@@ -25,7 +25,7 @@
     <h1>Warrior Project</h1>
 
     <p class="nes-balloon from-left nes-pointer">
-      Si les étapes sont validées, le point devient vert au rechargement de la page
+      Si les étapes sont validées, une étoile <i class="nes-icon is-small star"></i> apparait au rechargement de la page
     </p>
 
     @foreach ($results as $result)
@@ -43,7 +43,7 @@
 
 
     @if (checkNbBadAnswers($results) < 4)
-      <h1>Ready to fight ? </h1>
+      <h1 class="mt-3">Ready to fight ? </h1>
       <div class="flex mb-3">
         <a href="{{BattleField::getHost()}}?do=createMy&me={{$me}}" class="nes-btn is-primary mr-3">Create My Warrior</a>
         <a href="{{BattleField::getHost()}}?do=createOther&me={{$me}}" class="nes-btn is-primary  mr-3">Create Another</a>
@@ -56,7 +56,7 @@
     @endif
 
     @if (checkNbBadAnswers($results) == 0)
-      <h1>Pour aller plus loin ... </h1>
+      <h1  class="mt-3">Pour aller plus loin ... </h1>
       <ul class="nes-list is-disc">
         <li>Créez plus de  guerriers</li>
         <li>Affichez les caractéristiques de vos guerriers (Je vous conseille de le faire dans battlefield.blade.php)</li>
