@@ -19,7 +19,7 @@ Lancez un terminal Gitbash et copier/coller ligne par ligne les commandes suivan
 ```
 mkdir [REPERTOIRE]
 cd [REPERTOIRE]
-git clone https://github.com/campus-digital-grenoble/POO_Warrior_PHP.git
+git clone https://github.com/le-campus-numerique/PHP_POO_Warrior.git
 ```
 
 ### Avant d'aller plus loin :
@@ -40,7 +40,7 @@ composer install
 
 Sinon :
 ```
-cd POO_Warrior_PHP
+cd PHP_POO_Warrior
 php -r "copy('https://getcomposer.org/composer.phar', 'composer.phar');"
 ```
 
