@@ -1,4 +1,4 @@
-# POO_Warrior_PHP
+# PHP_POO_Warrior
 
 ## Installation Campus
 
