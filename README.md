@@ -57,3 +57,4 @@ cd public
 php -S localhost:8123
 ```
 
+Dans votre navigateur connectez vous à [http://localhost:8123](http://localhost:8123)
