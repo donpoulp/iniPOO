@@ -38,6 +38,7 @@ php -i # doit Afficher le phpinfo() sans erreurs;
 Si [Composer](https://getcomposer.org/) est déjà installé sur votre poste, lancez simplement la commande suivante puis passez à l'étape "Lancement du serveur".
 
 ```
+cd PHP_POO_Warrior
 composer install
 ```
 
