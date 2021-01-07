@@ -240,7 +240,7 @@ function CheckAnswer()
     // Check 16
     $has_my_warrior = new ResultElement("16/ La méthode createMyWarrior doit <u>instancier</u> un guerrier, lui affecter une arme, une image et le sauvegarder
  (n.b. la classe localWarrior contient une <u>méthode</u> saveNew). ATTENTION, l'id du guerrier doit être la <u>variable globale</u> warriorID.<br/>
- Créez ensuite votre guerrier grâce au lien <a class=\"nes-btn is-disabled mr-3\">Create My Warrior</a>", function () {
+ Créez ensuite votre guerrier grâce au lien <u>Create My Warrior</u> présent en bas de cette page", function () {
 
         $myWarrior = NULL;
         try {
@@ -263,7 +263,8 @@ function CheckAnswer()
 
     // Check 18
     $has_other_warriors = new ResultElement("18/ La <u>méthode statique</u> createOtherWarrior doit <u>instancier</u> un guerrier, lui affecter une arme, une image et le sauvegarder 
-    (n.b. la <u>classe</u> localWarrior contient une <u>méthode</u> saveNew). <br>Créez ensuite les autres guerriers grâce au lien <a class=\"nes-btn is-disabled mr-3\">Create Another</a>", function () {
+    (n.b. la <u>classe</u> localWarrior contient une <u>méthode</u> saveNew). 
+    <br>Créez ensuite les autres guerriers grâce au lien <u>Create Another</u> présent en bas de cette page", function () {
 
         $otherWarriors = NULL;
 
