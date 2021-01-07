@@ -31,22 +31,21 @@ php -i # doit Afficher le phpinfo() sans erreurs;
 ```
 
 
-### Installation de composer
+### Installation des dépendances de composer
 
-Si Composer est déjà installé sur votre poste, lancez simplement la commande suivante puis passez à l'étape "Lancement du serveur".
+#### Vous avez déjà Composer installé
+
+Si [Composer](https://getcomposer.org/) est déjà installé sur votre poste, lancez simplement la commande suivante puis passez à l'étape "Lancement du serveur".
+
 ```
 composer install
 ```
 
-Sinon :
+#### Vous n'avez pas Composer installé
+
 ```
 cd PHP_POO_Warrior
 php -r "copy('https://getcomposer.org/composer.phar', 'composer.phar');"
-```
-
-### Installation des dépendances via composer
-
-```
 php ./composer.phar install
 ```
 
