@@ -1,6 +1,7 @@
-class
-instancier
-attribut
-method
-setter
-getter
+class = Une classe représente un type de données créer.
+instancier = 
+attribut = une donnée membre de la classe que le peu rendre public ou non et la typer.
+method = c'est une fonction en POO
+constructeur = permet de construire une mise en forme avec different parametre (typer). 
+setter = fonction permetant un ajout ou une update d'un element choise (setter != set), 
+getter = 
